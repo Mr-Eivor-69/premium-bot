@@ -1,9 +1,9 @@
 const eris = require('eris');
-const { BOT_TOKEN, BOT_OWNER_ID } = require('../config.json');
+const { ODcwNzU1NDE0MTcyNjQ3NDU1.YQRYLA.odZ3HNXEG39yCB3VLGyD8pbDmAs, 868117571969384518 } = require('../config.json');
 
 const PREFIX = 'pb!';
 
-const bot = new eris.Client(BOT_TOKEN);
+const bot = new ODcwNzU1NDE0MTcyNjQ3NDU1.YQRYLA.odZ3HNXEG39yCB3VLGyD8pbDmAs);
 
 const commandForName = {};
 commandForName['addpayment'] = {
