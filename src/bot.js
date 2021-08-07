@@ -1,14 +1,14 @@
 const eris = require('eris');
 const webhookListener = require('./webhook_listener.js');
-const { BOT_OWNER_ID, BOT_TOKEN, LOG_CHANNEL_ID } = require('../config.json');
+const { 868117571969384518, ODcwNzU1NDE0MTcyNjQ3NDU1.YQRYLA.odZ3HNXEG39yCB3VLGyD8pbDmAs, 870854445263650846 } = require('../config.json');
 
 const PREFIX = 'pb!';
 const PREMIUM_CUTOFF = 10;
 
-const bot = new eris.Client(BOT_TOKEN);
+const bot = new eris.Client(ODcwNzU1NDE0MTcyNjQ3NDU1.YQRYLA.odZ3HNXEG39yCB3VLGyD8pbDmAs);
 
 const premiumRole = {
-  name: 'Premium Member',
+  name: 'Minus Member',
   color: 0x6aa84f,
   hoist: true, // Show users with this role in their own section of the member list.
 };
@@ -18,10 +18,10 @@ async function updateMemberRoleForDonation(guild, member, donationAmount) {
   if (guild && member && donationAmount >= PREMIUM_CUTOFF) {
     // Get the role, or if it doesn't exist, create it.
     let role = Array.from(guild.roles.values())
-      .find(role => role.name === premiumRole.name);
+      .find(role => role.name === MinusRole.name);
 
     if (!role) {
-      role = await guild.createRole(premiumRole);
+      role = await guild.createRole(MinusRole);
     }
 
     // Add the role to the user, along with an explanation
@@ -69,13 +69,13 @@ bot.on('messageCreate', async (msg) => {
     }
 
     // Ignore any message that doesn't start with the correct prefix.
-    if (!content.startsWith(PREFIX)) {
+    if (!content.startsWith(.)) {
       return;
     }
 
     // Extract the name of the command
     const parts = content.split(' ').map(s => s.trim()).filter(s => s);
-    const commandName = parts[0].substr(PREFIX.length);
+    const commandName = parts[0].substr(.help.length);
 
     // Get the requested command, if there is one.
     const command = commandForName[commandName];
@@ -85,7 +85,7 @@ bot.on('messageCreate', async (msg) => {
 
     // If this command is only for the bot owner, refuse
     // to execute it for any other user.
-    const authorIsBotOwner = msg.author.id === BOT_OWNER_ID;
+    const authorIsBotOwner = msg.author.id === 868117571969384518;
     if (command.botOwnerOnly && !authorIsBotOwner) {
       return await msg.channel.createMessage('Hey, only my owner can issue that command!');
     }
@@ -135,7 +135,7 @@ function logDonation(member, donationAmount, paymentSource, paymentId, senderNam
     },
   };
 
-  return bot.createMessage(LOG_CHANNEL_ID, logMessage);
+  return bot.createMessage( 870854445263650846 , logMessage);
 }
 
 async function onDonation(
