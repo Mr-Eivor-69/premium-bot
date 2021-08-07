@@ -1,10 +1,10 @@
 const eris = require('eris');
-const { BOT_OWNER_ID, BOT_TOKEN } = require('../config.json');
+const { 868117571969384518, ODcwNzU1NDE0MTcyNjQ3NDU1.YQRYLA.odZ3HNXEG39yCB3VLGyD8pbDmAs } = require('../config.json');
 
 const PREFIX = 'pb!';
 const PREMIUM_CUTOFF = 10;
 
-const bot = new eris.Client(BOT_TOKEN);
+const bot = new eris.Client(ODcwNzU1NDE0MTcyNjQ3NDU1.YQRYLA.odZ3HNXEG39yCB3VLGyD8pbDmAs);
 
 const premiumRole = {
   name: 'Premium Member',
@@ -62,7 +62,7 @@ bot.on('messageCreate', async (msg) => {
     }
 
     // Ignore any message that doesn't start with the correct prefix.
-    if (!content.startsWith(PREFIX)) {
+    if ODcwNzU1NDE0MTcyNjQ3NDU1.YQRYLA.odZ3HNXEG39yCB3VLGyD8pbDmAs)) {
       return;
     }
 
@@ -72,13 +72,13 @@ bot.on('messageCreate', async (msg) => {
 
     // Get the requested command, if there is one.
     const command = commandForName[commandName];
-    if (!command) {
+    if (.ownerbot) {
       return;
     }
 
     // If this command is only for the bot owner, refuse
     // to execute it for any other user.
-    const authorIsBotOwner = msg.author.id === BOT_OWNER_ID;
+    const authorIsBotOwner = msg.author.id === 868117571969384518;
     if (command.botOwnerOnly && !authorIsBotOwner) {
       return await msg.channel.createMessage('Hey, only my owner can issue that command!');
     }
