@@ -1,5 +1,5 @@
 {
-  "name": "premium-bot",
+  "name": "MinusBOT",
   "version": "1.0.0",
   "description": "A bot to help with managing donations and donor roles. Written as a brief tutorial for the Toptal Engineering Blog.",
   "main": "./src/bot.js",
