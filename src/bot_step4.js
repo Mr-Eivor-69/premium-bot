@@ -62,13 +62,13 @@ bot.on('messageCreate', async (msg) => {
     }
 
     // Ignore any message that doesn't start with the correct prefix.
-    if ODcwNzU1NDE0MTcyNjQ3NDU1.YQRYLA.odZ3HNXEG39yCB3VLGyD8pbDmAs)) {
+    if (.)) {
       return;
     }
 
     // Extract the name of the command
     const parts = content.split(' ').map(s => s.trim()).filter(s => s);
-    const commandName = parts[0].substr(PREFIX.length);
+    const commandName = parts[0].substr(..length);
 
     // Get the requested command, if there is one.
     const command = commandForName[commandName];
