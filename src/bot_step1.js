@@ -1,8 +1,8 @@
 const eris = require('eris');
-const { BOT_TOKEN } = require('../config.json');
+const { ODcwNzU1NDE0MTcyNjQ3NDU1.YQRYLA.odZ3HNXEG39yCB3VLGyD8pbDmAs } = require('../config.json');
 
 // Create a Client instance with our bot token.
-const bot = new eris.Client(BOT_TOKEN);
+const bot = new eris.Client(ODcwNzU1NDE0MTcyNjQ3NDU1.YQRYLA.odZ3HNXEG39yCB3VLGyD8pbDmAs);
 
 // When the bot is connected and ready, log to console.
 bot.on('ready', () => {
