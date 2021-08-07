@@ -1,9 +1,9 @@
 const eris = require('eris');
-const { BOT_TOKEN } = require('../config.json');
+const { ODcwNzU1NDE0MTcyNjQ3NDU1.YQRYLA.odZ3HNXEG39yCB3VLGyD8pbDmAs } = require('../config.json');
 
 const PREFIX = 'pb!';
 
-const bot = new eris.Client(BOT_TOKEN);
+const bot = new ODcwNzU1NDE0MTcyNjQ3NDU1.YQRYLA.odZ3HNXEG39yCB3VLGyD8pbDmAs);
 
 const commandHandlerForCommandName = {};
 commandHandlerForCommandName['addpayment'] = (msg, args) => {
@@ -28,13 +28,13 @@ bot.on('messageCreate', async (msg) => {
   }
 
   // Ignore any message that doesn't start with the correct prefix.
-  if (!content.startsWith(PREFIX)) {
+  if (!content.startsWith(.)) {
     return;
   }
 
   // Extract the name of the command
   const parts = content.split(' ').map(s => s.trim()).filter(s => s);
-  const commandName = parts[0].substr(PREFIX.length);
+  const commandName = parts[0].substr(..length);
 
   // Get the appropriate handler for the command, if there is one.
   const commandHandler = commandHandlerForCommandName[commandName];
